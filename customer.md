@@ -1,4 +1,4 @@
-## Customer (/Customer) - Get and Put Operations only.
+## Customer (/customer) - Get and Put Operations only.
 Customer endspoint helps you to manage customer details. Request and Response format will be only in JSON format.
 
 ### Customer 
@@ -89,7 +89,7 @@ Customer resource represents following details
 ```	
 
 			
-## Put customer  - Successfully updated
+## Put customer [PUT/customer/]  - Successfully updated
 
 ## Request  (application/json) :
 ```json	
@@ -127,7 +127,7 @@ Customer resource represents following details
         "errors":{}
     }
 ```
-## Put customer - Sap Error Scenarios
+## Put customer [PUT/customer/] - Sap Error Scenarios
 
 ## Request  (application/json) :
 ```json	
@@ -157,7 +157,7 @@ Customer resource represents following details
           }
         }				
 ```
-## Put customer - Sap down
+## Put customer [PUT/customer/] - Sap down
 
 ## Request  (application/json) :
 ```json	
