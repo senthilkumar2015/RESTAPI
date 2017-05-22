@@ -25,7 +25,9 @@ Customer resource represents following details
 
 ### Use cases
 
-## Get customer [GET/Customer] - Customer Details found
+## Get customer [GET/customer/{id}] - Customer details found
+## Parameters
+	id - 	customer resource unique id
 		
 ## Response 200 (application/json)
 ```json
@@ -54,9 +56,9 @@ Customer resource represents following details
         }			
 ```
 
-## Get customer [GET/customer/{bpcp}] - Sap - Customer Details Not found
+## Get customer [GET/customer/{id}] - Sap - Customer details not found
 ## Parameters
-	bpcp - 	customer BPCP value
+	id - 	customer resource unique id
 			
 ## Response 500 (application/json)
 ```json
@@ -69,9 +71,9 @@ Customer resource represents following details
          }
     }
  ```   
-## Get customer [GET/customer/{bpcp}] - Sap down
+## Get customer [GET/customer/{id}] - Sap down
 ### Parameters
-	bpcp - 	customer BPCP value
+	id - 	customer resource unique id
 			
 ### Response 500 (application/json)
 	
