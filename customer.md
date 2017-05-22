@@ -115,7 +115,7 @@ Customer resource represents following details
    }
 }		
 ```
-#Error Scenarios
+# Error Scenarios
 
 ## Get customer [GET/customers] - Sap - Customer details not found
 
@@ -249,7 +249,7 @@ Customer resource represents following details
         "errors":{}
     }
 ```
-#Error Scenarios
+# Error Scenarios
 ## Put customer [PUT/customer/{id}] - Sap Error Scenarios
 
 ## Parameters
