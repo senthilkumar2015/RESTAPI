@@ -41,35 +41,33 @@ Headers
 		
 Response 200 (application/json)
 ```json
-        {  
-   "status":"SUCCESS",
-   "data":{  
-      "customer":[  
-         {  
-            "id":"20053224845678",
-            "firstName":"Asd",
-            "middleName":"",
-            "lastName":"Asd",
-            "title":"Mr",
-            "emailReminderOpt":true,
-            "smsReminderOpt":true,
-            "letterReminderOpt":true,
-            "phoneReminderOpt":true,
-            "emailAddress":"setupdddata20@bg.com",
-            "phoneNumber":{  
-               "number":"07404669698",
-               "type":null
-            },
-            "totalAccounts":1,
-            "roleProfileID":"RP02",
-            "businessName":"St Edwards Church"
-         }
-      ]
-   },
-   "errors":{  
-
-   }
-}
+	{  
+		"status":"SUCCESS",
+		"data":{  
+		"customer":[  
+			{  
+				"id":"20053224845678",
+				"firstName":"Asd",
+				"middleName":"",
+				"lastName":"Asd",
+				"title":"Mr",
+				"emailReminderOpt":true,
+				"smsReminderOpt":true,
+				"letterReminderOpt":true,
+				"phoneReminderOpt":true,
+				"emailAddress":"setupdddata20@bg.com",
+				"phoneNumber":{  
+				"number":"07404669698",
+				"type":null
+					},
+				"totalAccounts":1,
+				"roleProfileID":"RP02",
+				"businessName":"St Edwards Church"
+			}
+			]
+			},
+		"errors":{}
+	}
 ```
 
 
@@ -78,6 +76,7 @@ Response 200 (application/json)
 
 #### Get customer [GET/customers/{id}] - Customer details found
  Parameters
+	
 	id - 	customer resource unique id
 
  Headers
@@ -87,33 +86,31 @@ Response 200 (application/json)
 		
  Response 200 (application/json)
 ```json
-        {  
-   "status":"SUCCESS",
-   "data":{  
-      "customer":{  
-         "id":"20053224845678",
-         "firstName":"Asd",
-         "middleName":"",
-         "lastName":"Asd",
-         "title":"Mr",
-         "emailReminderOpt":true,
-         "smsReminderOpt":true,
-         "letterReminderOpt":true,
-         "phoneReminderOpt":true,
-         "emailAddress":"setupdddata20@bg.com",
-         "phoneNumber":{  
-            "number":"07404669698",
-            "type":null
-         },
-         "totalAccounts":1,
-         "roleProfileID":"RP02",
-         "businessName":"St Edwards Church"
-      }
-   },
-   "errors":{  
-
-   }
-}		
+	{  
+		"status":"SUCCESS",
+		"data":{  
+		"customer":{  
+			"id":"20053224845678",
+			"firstName":"Asd",
+			"middleName":"",
+			"lastName":"Asd",
+			"title":"Mr",
+			"emailReminderOpt":true,
+			"smsReminderOpt":true,
+			"letterReminderOpt":true,
+			"phoneReminderOpt":true,
+			"emailAddress":"setupdddata20@bg.com",
+			"phoneNumber":{  
+			"number":"07404669698",
+			"type":null
+			},
+			"totalAccounts":1,
+			"roleProfileID":"RP02",
+			"businessName":"St Edwards Church"
+			}
+			},
+		"errors":{}
+	}		
 ```
 ### Error Scenarios
 
@@ -136,7 +133,9 @@ Response 200 (application/json)
 
 #### Get customer [GET/customers/{id}] - Sap - Customer details not found
  Parameters
+	
 	id - 	customer resource unique id
+	
  Headers
  
          Authorization: Bearer {accesstoken}
@@ -154,7 +153,9 @@ Response 200 (application/json)
     }
  ```   
 #### Get customer [GET/customers/{id}] - Sap down
+
  Parameters
+ 
 	id - 	customer resource unique id
 	
  Headers
@@ -201,26 +202,27 @@ Response 200 (application/json)
 #### Put customer [PUT/customers/{id}]  - Successfully updated
 
  Parameters
+ 
 	id - 	customer resource unique id
 
  Request  (application/json) :
 ```json	
-    {
-        "customer":{  
-            "id":"20053224845678",
-            "emailReminderOpt": true,
+	{
+		"customer":{  
+			"id":"20053224845678",
+			"emailReminderOpt": true,
 			"smsReminderOpt": true,
 			"letterReminderOpt": true,
 			"phoneReminderOpt": true,
-            "emailAddress":"setupdddata20@bg.com",
-            "phoneNumber": {
+			"emailAddress":"setupdddata20@bg.com",
+			"phoneNumber": {
 				"number": "07404669698",
 				"type": null
-			}
-           
-        }
+				}
 
-    }
+			}
+
+	}
 ```
 Headers
  
@@ -229,49 +231,50 @@ Headers
 Response 200 (application/json)
 ```json
 	
-    {  
-        "status":"SUCCESS",
-        "data":{ 
-            "customer":{  
-                "id":"20053224845678",
-                "emailReminderOpt": true,
-			"smsReminderOpt": true,
-			"letterReminderOpt": true,
-			"phoneReminderOpt": true,
-                "emailAddress":"setupdddata20@bg.com",
-              "phoneNumber": {
-				"number": "07404669698",
-				"type": null
-			}
+	{  
+		"status":"SUCCESS",
+		"data":{ 
+			"customer":{  
+				"id":"20053224845678",
+				"emailReminderOpt": true,
+				"smsReminderOpt": true,
+				"letterReminderOpt": true,
+				"phoneReminderOpt": true,
+				"emailAddress":"setupdddata20@bg.com",
+				"phoneNumber": {
+					"number": "07404669698",
+					"type": null
+					}
 
-                 }
-               },
-        "errors":{}
-    }
+				}
+			},
+		"errors":{}
+	}
 ```
 ### Error Scenarios
 #### Put customer [PUT/customer/{id}] - Sap Error Scenarios
 
  Parameters
+ 
 	id - 	customer resource unique id
 
  Request  (application/json) :
 ```json	
-            {
-              "customer":{  
-                  "id":"20053224845678",
-                 "emailReminderOpt": true,
-			"smsReminderOpt": true,
-			"letterReminderOpt": true,
-			"phoneReminderOpt": true,
-                  "emailAddress":"setupdddata20@bg.com",
-                  "phoneNumber": {
-				"number": "07404669698",
-				"type": null
-			}
-              
-              }
-            }
+	{
+		"customer":{  
+				"id":"20053224845678",
+				"emailReminderOpt": true,
+				"smsReminderOpt": true,
+				"letterReminderOpt": true,
+				"phoneReminderOpt": true,
+				"emailAddress":"setupdddata20@bg.com",
+				"phoneNumber": {
+					"number": "07404669698",
+					"type": null
+						}
+
+		}
+	}
 ```
 Headers
  
@@ -281,38 +284,39 @@ Headers
 Response 404 (application/json)
 	
 ```json
-        {  
-          "status":"FAILURE",
-          "data":{ },
-          "errors":{ 
-              "code":"Failure",
-              "message":"error.customer.updation.failure"
-          }
-        }				
+		{  
+			  "status":"FAILURE",
+			  "data":{ },
+			  "errors":{ 
+			      "code":"Failure",
+			      "message":"error.customer.updation.failure"
+			  }
+		}				
 ```
 #### Put customer [PUT/customer/{id}] - Sap down
 
 Parameters
+
 	id - 	customer resource unique id
 
 Request  (application/json) :
 ```json	
-            {
-              "customer":{  
-                    "id":"20053224845678",
-                    "emailReminderOpt": true,
-			"smsReminderOpt": true,
-			"letterReminderOpt": true,
-			"phoneReminderOpt": true,
-                    "emailAddress":"setupdddata20@bg.com",
-                    "phoneNumber": {
-				"number": "07404669698",
-				"type": null
-			}
-                   
-               }
+	{
+		"customer":{  
+				"id":"20053224845678",
+				"emailReminderOpt": true,
+				"smsReminderOpt": true,
+				"letterReminderOpt": true,
+				"phoneReminderOpt": true,
+				"emailAddress":"setupdddata20@bg.com",
+				"phoneNumber": {
+					"number": "07404669698",
+					"type": null
+						}
 
-          }
+			}
+
+	}
 						
 ```	
 Headers
@@ -337,7 +341,9 @@ Response 500 (application/json)
 #### Post customer [POST/customers/resetpassword/{id}]  - Successfully updated
 
  Parameters
+ 	
 	id - 	customer resource unique id
+	
 
  Request  (application/json) :
 ```json	
@@ -361,11 +367,11 @@ Response 200 (application/json)
         "status":"SUCCESS",
         "data":{ 
             "customer":{  
-                 "id":"20053224845678",
-            "emailAddress":"setupdddata20@bg.com",
-            "password":"password12"  
+			    "id":"20053224845678",
+			    "emailAddress":"setupdddata20@bg.com",
+			    "password":"password12"  
 
-                 }
+                 	}
                },
         "errors":{}
     }
@@ -378,6 +384,7 @@ Response 200 (application/json)
 #### Post customer [POST/customers/resetpassword/{id}] - DB Error Scenarios
 
  Parameters
+ 
 	id - 	customer resource unique id
 
  Request  (application/json) :
@@ -386,7 +393,7 @@ Response 200 (application/json)
               "customer":{  
                   "id":"20053224845678",
                   "emailAddress":"setupdddata20@bg.com",
-                "password":"password12"  
+                  "password":"password12"  
               
               }
             }
@@ -411,6 +418,7 @@ Response 404 (application/json)
 #### POST customer [POST/customers/resetpassword/{id}] - DB down
 
 Parameters
+
 	id - 	customer resource unique id
 
 Request  (application/json) :
@@ -419,7 +427,7 @@ Request  (application/json) :
               "customer":{  
                   "id":"20053224845678",
                   "emailAddress":"setupdddata20@bg.com",
-                "password":"password12"  
+                  "password":"password12"  
               
               }
             }
