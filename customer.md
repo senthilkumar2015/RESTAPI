@@ -28,6 +28,11 @@ Customer resource represents following details
 ## Get customer [GET/customer/{id}] - Customer details found
 ## Parameters
 	id - 	customer resource unique id
+
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 		
 ## Response 200 (application/json)
 ```json
