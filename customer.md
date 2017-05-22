@@ -7,30 +7,29 @@ Customer resource represents following details
 | Property | Type | As request | As response | Description |
 | :-------------------- | :---------- | :-------------------- | :-------------------- | ------------------------------------------------------------ |
 
-| id	|	String | Not required | Returned always | Its helps to identify customer resource. Value is combination of bpcp and unique id .|
-| title|String | Optional | Returned always | Its helps to identify customer title value.|
-|firstName|String  | Optional | Returned always| Its helps to identify customer first name value.|
-|middleName|String | Optional | Returned always| Its helps to identify customer middle name value.|
-|lastName|String | Optional | Returned always| Its helps to identify customer last name value.|
-|emailRemainder|String | Optional | Returned always| Its helps to identify customer Email Remainder status . Value will be either 'Y' or 'N'.|
-|smsRemainder|String | Optional | Returned always| Its helps to identify customer SMS Remainder status. Value will be either 'Y' or 'N'.|
-|phoneRemainder|String| Optional | Returned always| Its helps to identify customer Phone Remainder status.  Value will be either 'Y' or 'N'.|
-|letterRemainder|String| Optional | Returned always| Its helps to identify customer Letter Remainder status. Value will be either 'Y' or 'N'.|
-|phoneNumber|String| Optional | Returned always| Its helps to identify customer phone number value.|
-|emailID			|String| Optional | Returned always| Its helps to identify customer email value.|
-|totalAccounts|String| Optional | Returned always| Its helps to identify customer total no. of accounts count value.|
-|roleProfileID|String| Optional | Returned always| Its helps to identify customer role profile id value.|
-|businessName|String| Optional | Returned always| Its helps to identify customer business name value.|
-|password|String| Optional | Not Required| Its helps to identify customer password value.|
+| id | String | Not required | Returned always | Its helps to identify customer resource. Value is combination of bpcp and unique id. |
+| title | String | Optional | Returned always | Its helps to identify customer title value. |
+| firstName | String  | Optional | Returned always | Its helps to identify customer first name value. |
+| middleName | String | Optional | Returned always | Its helps to identify customer middle name value. |
+| lastName | String | Optional | Returned always | Its helps to identify customer last name value. |
+| emailRemainder | String | Optional | Returned always | Its helps to identify customer Email Remainder status . Value will be either 'Y' or 'N'. |
+| smsRemainder|  String | Optional | Returned always | Its helps to identify customer SMS Remainder status. Value will be either 'Y' or 'N'. |
+| phoneRemainder | String | Optional | Returned always | Its helps to identify customer Phone Remainder status.  Value will be either 'Y' or 'N'. |
+| letterRemainder | String | Optional | Returned always | Its helps to identify customer Letter Remainder status. Value will be either 'Y' or 'N'. |
+| phoneNumber | String| Optional | Returned always | Its helps to identify customer phone number value. |
+| emailID | String | Optional | Returned always | Its helps to identify customer email value. |
+| totalAccounts | String | Optional | Returned always | Its helps to identify customer total no. of accounts count value. |
+| roleProfileID | String | Optional | Returned always | Its helps to identify customer role profile id value. |
+| businessName | String | Optional | Returned always | Its helps to identify customer business name value. |
+| password | String | Optional | Not Required | Its helps to identify customer password value. |
 
 
 ### Use cases
 
-##Get customer [GET/Customer] - Customer Details found
-
-			
-	#Response 200 (application/json)
-
+## Get customer [GET/Customer] - Customer Details found
+		
+## Response 200 (application/json)
+```json
         {  
           "status":"SUCCESS",
           "data":{  
@@ -53,16 +52,15 @@ Customer resource represents following details
             }
           },
           "errors":{}
-        }
-			
+        }			
+```
 
-##Get customer [GET/customer/{bpcp}] - Sap - Customer Details Not found
-	#Parameters
-			bpcp - 	customer BPCP value
+## Get customer [GET/customer/{bpcp}] - Sap - Customer Details Not found
+## Parameters
+	bpcp - 	customer BPCP value
 			
-	#Response 500 (application/json)
-	
-	
+## Response 500 (application/json)
+```json
     {  
         "status":"FAILURE",
         "data":{ },
@@ -71,14 +69,14 @@ Customer resource represents following details
             "message":"error.customer.not.found"
          }
     }
-    
-##Get customer [GET/customer/{bpcp}] - Sap down
-	#Parameters
-			bpcp - 	customer BPCP value
+ ```   
+## Get customer [GET/customer/{bpcp}] - Sap down
+### Parameters
+	bpcp - 	customer BPCP value
 			
-	#Response 500 (application/json)
+### Response 500 (application/json)
 	
-	
+```json	
         {  
           "status":"FAILURE",
           "data":{},
@@ -87,13 +85,13 @@ Customer resource represents following details
             "message":"error.sap.pi.operation.failure"
           }
         }
-
+```	
 
 			
-##Put customer  - Successfully updated
+## Put customer  - Successfully updated
 
-	#Request  (application/json) :
-	
+## Request  (application/json) :
+```json	
     {
         "customer":{  
             "id":"20053224845678",
@@ -107,9 +105,9 @@ Customer resource represents following details
         }
 
     }
-
-	#Response 200 (application/json)
-	
+```
+## Response 200 (application/json)
+```json
 	
     {  
         "status":"SUCCESS",
@@ -127,12 +125,11 @@ Customer resource represents following details
                },
         "errors":{}
     }
+```
+## Put customer - Sap Error Scenarios
 
-
-##Put customer - Sap Error Scenarios
-
-	#Request  (application/json) :
-	
+## Request  (application/json) :
+```json	
             {
               "customer":{  
                   "id":"20053224845678",
@@ -145,11 +142,11 @@ Customer resource represents following details
                   "password":"password12"
               }
             }
-
+```
 						
-	#Response 500 (application/json)
+## Response 500 (application/json)
 	
-
+```json
         {  
           "status":"FAILURE",
           "data":{ },
@@ -158,11 +155,11 @@ Customer resource represents following details
               "message":"error.customer.updation.failure"
           }
         }				
+```
+## Put customer - Sap down
 
-##Put customer - Sap down
-
-	#Request  (application/json) :
-	
+## Request  (application/json) :
+```json	
             {
               "customer":{  
                     "id":"20053224845678",
@@ -177,10 +174,10 @@ Customer resource represents following details
 
           }
 						
-						
-	#Response 500 (application/json)
+```						
+## Response 500 (application/json)
 	
-	
+```json	
             {  
                   "status":"FAILURE",
                   "data":{},
@@ -190,4 +187,4 @@ Customer resource represents following details
                   }
             }			
 									
-						
+```						
