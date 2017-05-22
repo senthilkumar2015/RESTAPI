@@ -21,25 +21,25 @@ Customer resource represents following details
 | roleProfile | String | `Optional` | `Returned always` | Its helps to identify customer role profile id value. |
 | businessName | String | `Optional` | `Returned always` | Its helps to identify customer business name value. |
 
-#### PhoneNumber
+##### PhoneNumber
 
 | Name | Type | As request | As response | Description |
 | :---------- | :------ | -------- |---------|------------------------------------ |
-| number | string | `Mandatory`| `Returned always` | Valid Telephone number applicable. |
-| type | string | `Optional` | `Returned always` |Telephone number type, it can be `home`, `work`, `mobile`|
+| number | string | `Mandatory`| `Returned always` | Valid Phone number applicable. |
+| type | string | `Optional` | `Returned always` |Phone number type, it can be `home`, `work`, `mobile`|
 
 
-### Use cases
+## Use cases
 
 
-## Get customer [GET/customers] - Customer details found
+#### Get customer [GET/customers] - Customer details found
 
-## Headers
+Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 		
-## Response 200 (application/json)
+Response 200 (application/json)
 ```json
         {  
    "status":"SUCCESS",
@@ -76,16 +76,16 @@ Customer resource represents following details
 
 
 
-## Get customer [GET/customers/{id}] - Customer details found
-## Parameters
+#### Get customer [GET/customers/{id}] - Customer details found
+ Parameters
 	id - 	customer resource unique id
 
-## Headers
+ Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 		
-## Response 200 (application/json)
+ Response 200 (application/json)
 ```json
         {  
    "status":"SUCCESS",
@@ -115,16 +115,16 @@ Customer resource represents following details
    }
 }		
 ```
-# Error Scenarios
+### Error Scenarios
 
-## Get customer [GET/customers] - Sap - Customer details not found
+#### Get customer [GET/customers] - Sap - Customer details not found
 
-## Headers
+ Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 	 
-## Response 200 (application/json)
+ Response 200 (application/json)
 ```json
     {  
         "status":"SUCCESS",
@@ -134,15 +134,15 @@ Customer resource represents following details
  ```   
 
 
-## Get customer [GET/customers/{id}] - Sap - Customer details not found
-## Parameters
+#### Get customer [GET/customers/{id}] - Sap - Customer details not found
+ Parameters
 	id - 	customer resource unique id
-## Headers
+ Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 	 
-## Response 404 (application/json)
+ Response 404 (application/json)
 ```json
     {  
         "status":"FAILURE",
@@ -153,16 +153,16 @@ Customer resource represents following details
          }
     }
  ```   
-## Get customer [GET/customers/{id}] - Sap down
-### Parameters
+#### Get customer [GET/customers/{id}] - Sap down
+ Parameters
 	id - 	customer resource unique id
 	
-## Headers
+ Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526	
 			
-### Response 500 (application/json)
+ Response 500 (application/json)
 	
 ```json	
         {  
@@ -176,14 +176,14 @@ Customer resource represents following details
 ```	
 
 
-## Get customer [GET/customers] - Sap down
+#### Get customer [GET/customers] - Sap down
 
-## Headers
+ Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526	
 			
-### Response 500 (application/json)
+ Response 500 (application/json)
 	
 ```json	
         {  
@@ -198,12 +198,12 @@ Customer resource represents following details
 
 
 			
-## Put customer [PUT/customers/{id}]  - Successfully updated
+#### Put customer [PUT/customers/{id}]  - Successfully updated
 
-## Parameters
+ Parameters
 	id - 	customer resource unique id
 
-## Request  (application/json) :
+ Request  (application/json) :
 ```json	
     {
         "customer":{  
@@ -222,11 +222,11 @@ Customer resource represents following details
 
     }
 ```
-## Headers
+Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
-## Response 200 (application/json)
+Response 200 (application/json)
 ```json
 	
     {  
@@ -249,13 +249,13 @@ Customer resource represents following details
         "errors":{}
     }
 ```
-# Error Scenarios
-## Put customer [PUT/customer/{id}] - Sap Error Scenarios
+### Error Scenarios
+#### Put customer [PUT/customer/{id}] - Sap Error Scenarios
 
-## Parameters
+ Parameters
 	id - 	customer resource unique id
 
-## Request  (application/json) :
+ Request  (application/json) :
 ```json	
             {
               "customer":{  
@@ -273,12 +273,12 @@ Customer resource represents following details
               }
             }
 ```
-## Headers
+Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 	 
-## Response 404 (application/json)
+Response 404 (application/json)
 	
 ```json
         {  
@@ -290,12 +290,12 @@ Customer resource represents following details
           }
         }				
 ```
-## Put customer [PUT/customer/{id}] - Sap down
+#### Put customer [PUT/customer/{id}] - Sap down
 
-## Parameters
+Parameters
 	id - 	customer resource unique id
 
-## Request  (application/json) :
+Request  (application/json) :
 ```json	
             {
               "customer":{  
@@ -315,12 +315,12 @@ Customer resource represents following details
           }
 						
 ```	
-## Headers
+Headers
  
          Authorization: Bearer {accesstoken}
          cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 	 
-## Response 500 (application/json)
+Response 500 (application/json)
 	
 ```json	
             {  
