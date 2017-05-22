@@ -64,7 +64,11 @@ Customer resource represents following details
 ## Get customer [GET/customer/{id}] - Sap - Customer details not found
 ## Parameters
 	id - 	customer resource unique id
-			
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
+	 
 ## Response 500 (application/json)
 ```json
     {  
@@ -79,6 +83,11 @@ Customer resource represents following details
 ## Get customer [GET/customer/{id}] - Sap down
 ### Parameters
 	id - 	customer resource unique id
+	
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526	
 			
 ### Response 500 (application/json)
 	
@@ -95,6 +104,11 @@ Customer resource represents following details
 
 			
 ## Put customer [PUT/customer/]  - Successfully updated
+
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 
 ## Request  (application/json) :
 ```json	
@@ -134,6 +148,11 @@ Customer resource represents following details
 ```
 ## Put customer [PUT/customer/] - Sap Error Scenarios
 
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
+
 ## Request  (application/json) :
 ```json	
             {
@@ -163,6 +182,11 @@ Customer resource represents following details
         }				
 ```
 ## Put customer [PUT/customer/] - Sap down
+
+## Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
 
 ## Request  (application/json) :
 ```json	
