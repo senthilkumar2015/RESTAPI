@@ -29,7 +29,7 @@ Customer resource represents following details
 | type | string | `Optional` | `Returned always` |Phone number type, it can be `home`, `work`, `mobile`|
 
 
-## Use cases
+### Use cases
 
 
 #### Get customer [GET/customers] - Customer details found
@@ -55,7 +55,7 @@ Response 200 (application/json)
             "smsReminderOpt":true,
             "letterReminderOpt":true,
             "phoneReminderOpt":true,
-            "emailID":"setupdddata20@bg.com",
+            "emailAddress":"setupdddata20@bg.com",
             "phoneNumber":{  
                "number":"07404669698",
                "type":null
@@ -100,7 +100,7 @@ Response 200 (application/json)
          "smsReminderOpt":true,
          "letterReminderOpt":true,
          "phoneReminderOpt":true,
-         "emailID":"setupdddata20@bg.com",
+         "emailAddress":"setupdddata20@bg.com",
          "phoneNumber":{  
             "number":"07404669698",
             "type":null
@@ -212,7 +212,7 @@ Response 200 (application/json)
 			"smsReminderOpt": true,
 			"letterReminderOpt": true,
 			"phoneReminderOpt": true,
-            "emailID":"setupdddata20@bg.com",
+            "emailAddress":"setupdddata20@bg.com",
             "phoneNumber": {
 				"number": "07404669698",
 				"type": null
@@ -238,7 +238,7 @@ Response 200 (application/json)
 			"smsReminderOpt": true,
 			"letterReminderOpt": true,
 			"phoneReminderOpt": true,
-                "emailID":"setupdddata20@bg.com",
+                "emailAddress":"setupdddata20@bg.com",
               "phoneNumber": {
 				"number": "07404669698",
 				"type": null
@@ -264,7 +264,7 @@ Response 200 (application/json)
 			"smsReminderOpt": true,
 			"letterReminderOpt": true,
 			"phoneReminderOpt": true,
-                  "emailID":"setupdddata20@bg.com",
+                  "emailAddress":"setupdddata20@bg.com",
                   "phoneNumber": {
 				"number": "07404669698",
 				"type": null
@@ -304,7 +304,7 @@ Request  (application/json) :
 			"smsReminderOpt": true,
 			"letterReminderOpt": true,
 			"phoneReminderOpt": true,
-                    "emailID":"setupdddata20@bg.com",
+                    "emailAddress":"setupdddata20@bg.com",
                     "phoneNumber": {
 				"number": "07404669698",
 				"type": null
@@ -332,4 +332,115 @@ Response 500 (application/json)
                   }
             }			
 									
-```						
+```			
+
+#### Post customer [POST/customers/resetpassword/{id}]  - Successfully updated
+
+ Parameters
+	id - 	customer resource unique id
+
+ Request  (application/json) :
+```json	
+    {
+        "customer":{  
+            "id":"20053224845678",
+            "emailAddress":"setupdddata20@bg.com",
+            "password":"password12"           
+        }
+
+    }
+```
+Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
+Response 200 (application/json)
+```json
+	
+    {  
+        "status":"SUCCESS",
+        "data":{ 
+            "customer":{  
+                 "id":"20053224845678",
+            "emailAddress":"setupdddata20@bg.com",
+            "password":"password12"  
+
+                 }
+               },
+        "errors":{}
+    }
+```
+
+
+
+
+### Error Scenarios
+#### Post customer [POST/customers/resetpassword/{id}] - DB Error Scenarios
+
+ Parameters
+	id - 	customer resource unique id
+
+ Request  (application/json) :
+```json	
+            {
+              "customer":{  
+                  "id":"20053224845678",
+                  "emailAddress":"setupdddata20@bg.com",
+                "password":"password12"  
+              
+              }
+            }
+```
+Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
+	 
+Response 404 (application/json)
+	
+```json
+        {  
+          "status":"FAILURE",
+          "data":{ },
+          "errors":{ 
+              "code":"Failure",
+              "message":"error.customer.password.updation.failure"
+          }
+        }				
+```
+#### POST customer [POST/customers/resetpassword/{id}] - DB down
+
+Parameters
+	id - 	customer resource unique id
+
+Request  (application/json) :
+```json	
+           {
+              "customer":{  
+                  "id":"20053224845678",
+                  "emailAddress":"setupdddata20@bg.com",
+                "password":"password12"  
+              
+              }
+            }
+						
+```	
+Headers
+ 
+         Authorization: Bearer {accesstoken}
+         cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
+	 
+Response 500 (application/json)
+	
+```json	
+            {  
+                  "status":"FAILURE",
+                  "data":{},
+                  "errors":{ 
+                          "code":"DB Failure",
+                          "message":"error.db.operation.failure"
+                  }
+            }			
+									
+```		
+			
