@@ -1,8 +1,8 @@
-## Customer (/customers) - Get and Put Operations only.
-Customer end point helps you to manage customer details. Request and Response format will be only in JSON format.
+## Customers (/customers) - Get and Put Operations only.
+Customers end point helps you to manage customer details. Request and Response format will be only in JSON format.
 
-### Customer 
-Customer resource represents following details
+### Customers 
+Customers resource represents following details
 
 | Property | Type | As request | As response | Description |
 | :-------------------- | :---------- | :-------------------- | :-------------------- | ------------------------------------------------------------ |
@@ -17,8 +17,7 @@ Customer resource represents following details
 | letterReminderOpt | Boolean | `Optional` | `Returned always` | Its helps to identify customer Letter Reminder status. Value will be either True or False. |
 | phoneNumber | PhoneNumber| `Optional` | `Returned always` | Its helps to identify customer phone number value. |
 | emailAddress | String | `Optional` | `Returned always` | Its helps to identify customer email value. |
-| totalAccounts | String | `Optional` | `Returned always` | Its helps to identify customer total no. of accounts count value. |
-| roleProfile | String | `Optional` | `Returned always` | Its helps to identify customer role profile id value. |
+| roleProfile | String | `Optional` | `Returned always` | Its helps to identify customer role profile value. |
 | businessName | String | `Optional` | `Returned always` | Its helps to identify customer business name value. |
 
 ##### PhoneNumber
@@ -32,7 +31,7 @@ Customer resource represents following details
 ### Use cases
 
 
-#### Get customer [GET/customers] - Customer details found
+#### Get customers [GET/customers] - Customer details found
 
 Headers
  
@@ -60,8 +59,7 @@ Response 200 (application/json)
 				"number":"07404669698",
 				"type":null
 					},
-				"totalAccounts":1,
-				"roleProfileID":"RP02",
+				"roleProfile":"RP02",
 				"businessName":"St Edwards Church"
 			}
 			]
@@ -74,7 +72,7 @@ Response 200 (application/json)
 
 
 
-#### Get customer [GET/customers/{id}] - Customer details found
+#### Get customers [GET/customers/{id}] - Customer details found
  Parameters
 	
 	id - 	customer resource unique id
@@ -104,8 +102,7 @@ Response 200 (application/json)
 			"number":"07404669698",
 			"type":null
 			},
-			"totalAccounts":1,
-			"roleProfileID":"RP02",
+			"roleProfile":"RP02",
 			"businessName":"St Edwards Church"
 			}
 			},
@@ -114,7 +111,7 @@ Response 200 (application/json)
 ```
 ### Error Scenarios
 
-#### Get customer [GET/customers] - Sap - Customer details not found
+#### Get customers [GET/customers] - Sap - Customer details not found
 
  Headers
  
@@ -131,7 +128,7 @@ Response 200 (application/json)
  ```   
 
 
-#### Get customer [GET/customers/{id}] - Sap - Customer details not found
+#### Get customers [GET/customers/{id}] - Sap - Customer details not found
  Parameters
 	
 	id - 	customer resource unique id
@@ -152,7 +149,7 @@ Response 200 (application/json)
          }
     }
  ```   
-#### Get customer [GET/customers/{id}] - Sap down
+#### Get customers [GET/customers/{id}] - Sap down
 
  Parameters
  
@@ -177,7 +174,7 @@ Response 200 (application/json)
 ```	
 
 
-#### Get customer [GET/customers] - Sap down
+#### Get customers [GET/customers] - Sap down
 
  Headers
  
@@ -199,7 +196,7 @@ Response 200 (application/json)
 
 
 			
-#### Put customer [PUT/customers/{id}]  - Successfully updated
+#### Put customers [PUT/customers/{id}]  - Successfully updated
 
  Parameters
  
@@ -252,7 +249,7 @@ Response 200 (application/json)
 	}
 ```
 ### Error Scenarios
-#### Put customer [PUT/customer/{id}] - Sap Error Scenarios
+#### Put customers [PUT/customer/{id}] - Sap Error Scenarios
 
  Parameters
  
@@ -293,7 +290,7 @@ Response 404 (application/json)
 			  }
 		}				
 ```
-#### Put customer [PUT/customer/{id}] - Sap down
+#### Put customers [PUT/customer/{id}] - Sap down
 
 Parameters
 
@@ -338,7 +335,7 @@ Response 500 (application/json)
 									
 ```			
 
-#### Post customer [POST/customers/resetpassword/{id}]  - Successfully updated
+#### Post customers [POST/customers/resetpassword/{id}]  - Successfully updated
 
  Parameters
  	
@@ -381,7 +378,7 @@ Response 200 (application/json)
 
 
 ### Error Scenarios
-#### Post customer [POST/customers/resetpassword/{id}] - DB Error Scenarios
+#### Post customers [POST/customers/resetpassword/{id}] - DB Error Scenarios
 
  Parameters
  
@@ -415,7 +412,7 @@ Response 404 (application/json)
           }
         }				
 ```
-#### POST customer [POST/customers/resetpassword/{id}] - DB down
+#### POST customers [POST/customers/resetpassword/{id}] - DB down
 
 Parameters
 
